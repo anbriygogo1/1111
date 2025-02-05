@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLUE PENGUIN</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ebf8ff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    nav {
+      width: 100%;
+      background-color: #63b3ed;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+    .buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+	  z-index: 1000;
+    }
+    .buttons button {
+      background-color: #4299e1;
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .buttons button:hover {
+      background-color: #2b6cb0;
+      transform: scale(1.1);
+    }
+    .main-content img {
+      width: 256px;
+      height: auto;
+      margin: 2rem 0;
+      animation: rotatePenguin 4s ease-in-out infinite, bouncePenguin 2s ease-in-out infinite;
+    }
+
+    @keyframes rotatePenguin {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes bouncePenguin {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .main-content h1 {
+      font-size: 3rem;
+      color: #3182ce;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .main-content .jump-button {
+      background-color: #4299e1;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .main-content .jump-button:hover {
+      background-color: #2b6cb0;
+      transform: scale(1.1);
+    }
+    .info-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      max-width: 900px;
+      padding: 1rem;
+    }
+
+    .info-box {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-box::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border-radius: 16px;
+      background: none;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      box-shadow: 0 0 20px rgba(0, 120, 212, 0.6), 0 0 30px rgba(0, 170, 255, 0.6);
+      animation: glowing 2s infinite ease-in-out;
+    }
+
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 20px rgba(0, 120, 212, 0.6), 0 0 30px rgba(0, 170, 255, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(0, 170, 255, 0.8), 0 0 40px rgba(0, 120, 212, 0.8);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(0, 120, 212, 0.6), 0 0 30px rgba(0, 170, 255, 0.6);
+      }
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-box h2 {
+      font-size: 1.5rem;
+      color: #3182ce;
+    }
+    .info-box p {
+      color: #4a5568;
+    }
+
+    @media (min-width: 768px) {
+      .info-section {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">BLUE PENGUIN</div>
+  </nav>
+
+  <div class="main-content">
+    <img src="image/1.png" alt="Blue Penguin">
+    <h1>BLUE!</h1>
+   <a href="" target="_blank">
+  <button class="jump-button">BUY NOW! 💵</button>
+</a>
+  </div>
+
+  <div class="buttons">
+    <a href="https://t.me/PenguinBLU" target="_blank">
+        <button>Telegram</button>
+    </a>
+    <a href="https://x.com/Penguinabs" target="_blank">
+        <button>Twitter</button>
+    </a>
+</div>
+
+  <div class="info-section">
+    <div class="info-box">
+      <h2>1. Moonshot ❄️</h2>
+      <p>We’ll start by launching our token on Moonshot, building awareness and engaging with the community. The goal is to raise funds through an ICO/IDO and create momentum for the token’s growth.</p>
+    </div>
+    <div class="info-box">
+      <h2>2. List on DEX 🚀</h2>
+      <p>Next, we’ll list the token on decentralized exchanges like Uniswap or PancakeSwap. This will allow for easy trading and increase liquidity. We’ll also run marketing campaigns to boost demand and visibility.</p>
+    </div>
+    <div class="info-box">
+      <h2>3. Expand Globally</h2>
+      <p>Finally, we’ll list the token on centralized exchanges like Binance or Coinbase, expanding its reach globally. We’ll integrate the token with other projects and partnerships, ensuring widespread adoption.</p>
+    </div>
+  </div>
+</body>
+</html>
